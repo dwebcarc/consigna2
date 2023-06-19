@@ -1,0 +1,550 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    background-color: #F4F6FC;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    padding: 2rem;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon__line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+.menu.active {
+    display: flex;
+}
+
+.menu a {
+    color: #050A30;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #5CB6F9;
+}
+
+nav img {
+    width: 5.3rem;
+}
+
+.main {
+    padding-top: 20px;
+    background-color: #050A30;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    color: #F4F6FC;
+}
+
+.main h1 {
+    font-size: 40px;
+    margin-bottom: 2rem;
+}
+
+.info-content {
+    height: auto;
+    padding: 2rem;
+}
+
+.animate-text {
+    font-size: 24px;
+    letter-spacing: 0.075rem;
+    margin-bottom: 2rem;
+}
+
+.animate-text::after {
+    content: "|";
+    font-size: 1.6rem;
+    font-family: "Inconsolata", monospace;
+    animation-name: parpadeo;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes parpadeo {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.info-content span {
+    color: #5CB6F9;
+}
+
+.download-cv {
+    padding: 10px 20px;
+    background-color: #F4F6FC;
+    color: #050A30;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: medium;
+    text-decoration: none;
+}
+
+.download-cv:hover {
+    background-color: #5CB6F9;
+    box-shadow: none;
+    font-weight: bold;
+}
+
+.main img {
+    border: 4px solid #F4F6FC;
+    width: 85vw;
+    object-fit: cover;
+    margin: 10px;
+    animation: zoom 8s 0s;
+}
+
+@keyframes zoom {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F4F6FC;
+    color: #050A30;
+}
+
+.about img {
+    width: 100vw;
+}
+
+.about-info {
+    padding: 2em;
+}
+
+.about-info h2 {
+    font-size: 32px;
+    color: #191c32;
+    margin-bottom: 2rem;
+}
+
+.about p {
+    margin-bottom: 1rem;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.tecnologias {
+    background-color: #CAE8FF;
+    color: #050A30;
+    height: 18rem;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.tecnologias h2 {
+    font-size: 2.3rem;
+    margin-bottom: 3rem;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.icons i {
+    margin-bottom: 1rem;
+}
+
+.icons p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.portfolio {
+    width: 100vw;
+    background-color: #050A30;
+    color: #F4F6FC;
+    padding: 2rem;
+    text-align: center;
+}
+
+.portfolio-heading {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.portfolio-heading h2 {
+    font-size: 2.3rem;
+    color: #F4F6FC;
+    margin-bottom: 1rem;
+}
+
+.portfolio .container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    height: 30rem;
+    background-color: #5CB6F9;
+    margin: 1rem;
+    border-radius: 25px;
+}
+
+.card__img img {
+    width: 85vw;
+    border-radius: 25px 25px 0 0;
+}
+
+.card__title {
+    padding: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.card__title h4 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.card__proyect-links {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1.5rem;
+}
+
+.card__proyect-links a {
+    color: #F4F6FC;
+    text-decoration: none;
+}
+
+.card__proyect-links i {
+    font-size: 2rem;
+    color: F4F6FC;
+}
+
+.button-content button {
+    padding: 10px 20px;
+    background-color: #050A30;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+.button-content button:hover {
+    background-color: #12229D;
+    box-shadow: none;
+    font-weight: bold;
+}
+
+.project-details-button a {
+    text-decoration: none;
+    color: #F4F6FC;
+}
+
+.sec-contac {
+    text-align: center;
+    background-color: #12229D;
+    color: #F4F6FC;
+    padding: 3rem 2rem;
+}
+
+.sec-contac h2 {
+    font-size: 2.3rem;
+    margin-bottom: 3rem;
+}
+
+.form-contac button {
+    padding: 10px 20px;
+    background-color: #F4F6FC;
+    color: #050A30;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.form-contac button:hover {
+    background-color: #5CB6F9;
+    box-shadow: none;
+    font-weight: bold;
+}
+
+.form-contac {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-contac label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.form-contac input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #050A30;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #F4F6FC;
+    text-align: center;
+    padding: 2rem 2rem;
+}
+
+footer h3 {
+    font-size: 1rem;
+    font-weight: 100;
+    margin-top: 1rem;
+}
+
+.icons a {
+    text-decoration: none;
+    color: #12229D;
+}
+
+.icons i {
+    font-size: 30px;
+}
+
+@media (min-width: 414px) {
+    .card {
+        height: 43rem;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .navbar {
+        padding-right: 10rem;
+    }
+
+    .menu-icon {
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu li {
+        margin-left: 20px;
+    }
+
+    .menu a {
+        font-size: 22px;
+    }
+
+    .main {
+        flex-direction: row;
+        padding: 3rem 0;
+    }
+
+    .main img {
+        width: 50vw;
+        margin-left: 2rem;
+    }
+
+    .about {
+        flex-direction: row;
+    }
+
+    .about img {
+        width: 50vw;
+    }
+
+
+    .portfolio .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card__img img {
+        width: 20rem;
+    }
+
+    .card {
+        height: 30rem;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .about {
+        flex-direction: row;
+    }
+
+    .about img {
+        width: 40vw;
+    }
+
+}
+
+@media (min-width: 1800px) {
+
+    .menu a {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    nav img {
+        width: 5.5rem;
+
+    }
+
+    .main h1 {
+        font-size: 60px;
+        margin-bottom: 4rem;
+    }
+
+    .animate-text {
+        font-size: 34px;
+        font-weight: 200;
+        margin-bottom: 3rem;
+    }
+
+    .download-cv {
+        padding: 10px 60px;
+        font-size: xx-large;
+    }
+
+    .tecnologias {
+        padding: 2 6rem;
+    }
+
+    .tecnologias h2 {
+        font-size: 4rem;
+    }
+
+    .icon {
+        margin-right: 2rem;
+    }
+
+    .icons p {
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+
+    .icons i {
+        font-size: 4rem;
+    }
+
+    .button-content button {
+        padding: 10px 40px;
+        font-size: x-large;
+    }
+
+    .about-info h2 {
+        font-size: 42px;
+        color: #191c32;
+        margin-bottom: 2rem;
+    }
+
+    .about p {
+        margin-bottom: 1rem;
+        font-size: 28px;
+        font-weight: 300;
+    }
+
+    .form-contac {
+        max-width: 900px;
+    }
+
+    .form-contac button {
+        padding: 10px 40px;
+        font-size: x-large;
+    }
+
+    .form-contac label {
+        font-size: 20px;
+    }
+
+    footer {
+        padding: 3rem 3rem;
+    }
+
+    footer h3 {
+        margin-top: 2rem;
+    }
+}
